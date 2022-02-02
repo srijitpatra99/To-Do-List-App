@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Your Pending Tasks</title>
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <form action="/logout" class="signup" method="POST">
+    <div class="btn">
+       <div class="btn-layer"></div>
+       <input type="submit" value="Logout">
+    </div>
+ </form>
+  <div class="wrapper">
+    <header>To-Do List</header>
+      <div class="inputField">
+        <form action="/addTask" method="POST">
+          <input type="text" placeholder="Add your new todo" name="task">
+          <button type="submit"><i class="fas fa-plus"></i></button>
+        </form>
+      </div>
+    <ul class="todoList">
+      <% if(task.length > 0) { %>
+        <% for(let t of task) { %>
+          <li><%= t.name %><form action="/delete" method="POST">
+            <input type="hidden" value="<%= t._id %>" name="taskId">
+            <button type="submit" class="icon"><i class="fas fa-trash"></i></button>
+          </form>
+          <%= t.createdAt %>
+          </li>
+        <% } %>
+      <% } %>          
+    </ul>
+    <form action="/deleteAll" method="POST">
+      <div class="footer">
+        <span>You have <%=task.length%> pending tasks</span>
+        <button type="submit" class="<%= task.length!==0 ? 'active':'' %>">Clear All</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="/script.js"></script>
+
+</body>
+</html>

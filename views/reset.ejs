@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reset password</title>
+    <link rel="stylesheet" href="/reset.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title-reset">
+            Reset Password Form
+        </div>
+        <div class="form-container">
+           <% if(errorMessage){ %>
+               <div class="error-message"><%= errorMessage %></div>
+           <% } %>    
+           <div class="form-inner"> 
+                 <form action="/forgot" class="reset" method="POST">
+                    <div class="field">
+                       <input type="email" placeholder="Email Address" name="email" required>
+                    </div>
+                    <div class="field btn">
+                       <div class="btn-layer"></div>
+                       <input type="submit" value="Reset">
+                    </div>
+                 </form>
+           </div>
+        </div>
+     </div>    
+</body>
+</html>
