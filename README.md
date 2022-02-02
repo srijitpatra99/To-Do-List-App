@@ -8,4 +8,4 @@ Keep A Track Of Your Pending Tasks By Making A List For Them Here.
  ![Signup Form image](https://github.com/srijitpatra99/To-Do-List-App/blob/master/images/SignUp.png?raw=true)
  
  **TASK FORM PAGE**
- ![Signup Form image](https://github.com/srijitpatra99/To-Do-List-App/blob/master/images/SignUp.png?raw=true)
+ ![Task Form image](https://github.com/srijitpatra99/To-Do-List-App/blob/master/images/Task%20Form.png?raw=true)
