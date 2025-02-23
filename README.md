@@ -1,7 +1,3 @@
-Here's a refined and visually appealing **README.md** for your **To-Do List App** repository:
-
----
-
 # ✅ To-Do List App  
 
 A simple and efficient **task management application** that helps you **track pending tasks** by creating a to-do list. Users can **sign up, log in, and manage tasks** seamlessly.  
